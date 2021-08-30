@@ -565,20 +565,31 @@ hr {
         }
 
         #other-section {
-            display: flex;
+            display: grid;
+            grid-template-areas: 'other-sec1 other-sec2 other-sec3 other-sec4';
+            grid-template-columns: 200px 190px 230px 170px;
+            grid-gap: 90px;
             margin: 0 55px;
             margin-bottom: 75px;
-            @include tablet{
-                display: block;
+            @include tablet {
+                grid-template-areas: 'other-sec1 other-sec2'
+                    'other-sec3 other-sec4';
+                grid-template-columns: calc(50% - 10px) auto;
+                grid-gap: 50px;
                 margin: 0 10px;
                 margin-bottom: 50px;
+            }
+            @include mini {
+                grid-template-areas: 'other-sec1'
+                    'other-sec2'
+                    'other-sec3'
+                    'other-sec4';
+                grid-template-columns: 100%;
+                grid-gap: 25px;
             }
             .other-section-common-class {
                 display: inline-block;
 
-                @include tablet {
-                    width: calc(50% - 10px);
-                }
                 .other-section-heading {
                     margin-bottom: 35px;
                     p {
@@ -592,21 +603,11 @@ hr {
                         margin-bottom: 15px;
                         color: returnMap($colors, black);
                     }
-                    img {
-                        display: inline-block;
-                        margin-right: 10px;
-                        margin-bottom: 20px;
-                        &:nth-child(3n) {
-                            margin-right: 0;
-                        }
-                    }
                 }
             }
             .other-section-1 {
-                width: 200px;
-                margin-right: 115px;
+                grid-area: other-sec1;
                 @include tablet {
-                    width: calc(50% - 10px);
                     margin-right: 0;
                     text-align: center;
                 }
@@ -617,13 +618,13 @@ hr {
                 }
             }
             .other-section-2 {
-                width: 350px;
-                margin-right: 120px;
+                grid-area: other-sec2;
                 @include tablet {
-                    width: calc(50% - 10px);
                     margin-right: 0;
                     text-align: center;
-                    margin-bottom: 30px;
+                }
+                @include mini {
+                    margin-bottom: 0;
                 }
                 .other-section-content {
                     p {
@@ -635,10 +636,8 @@ hr {
                 }
             }
             .other-section-3 {
-                width: 500px;
-                margin-right: 75px;
+                grid-area: other-sec3;
                 @include tablet {
-                    width: calc(50% - 10px);
                     margin-right: 0;
                     text-align: center;
                 }
@@ -653,9 +652,59 @@ hr {
             }
 
             .other-section-4 {
+                grid-area: other-sec4;
                 @include tablet {
-                    width: calc(50% - 10px);
                     text-align: center;
+                }
+                .other-section-content {
+                    display: grid;
+                    grid-template-areas: 'flicker1 flicker2 flicker3'
+                        'flicker4 flicker5 flicker6'
+                        'flicker7 flicker8 flicker8';
+                    grid-gap: 20px 10px;
+                    @include tablet {
+                        grid-template-areas: 'flicker1 flicker2 flicker3 flicker4'
+                            'flicker5 flicker6 flicker7 flicker8';
+                        grid-gap: 10px 20px;
+                    }
+                    @include mini {
+                        margin: 0 auto;
+                        width: 230px;
+                        grid-gap: 10px;
+                    }
+                    .flicker-image {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .flicker-image1 {
+                        grid-area: flicker1;
+                    }
+                    .flicker-image2 {
+                        grid-area: flicker2;
+                    }
+                    .flicker-image3 {
+                        grid-area: flicker3;
+                    }
+                    .flicker-image4 {
+                        grid-area: flicker4;
+                    }
+                    .flicker-image5 {
+                        grid-area: flicker5;
+                    }
+                    .flicker-image6 {
+                        grid-area: flicker6;
+                    }
+                    .flicker-image7 {
+                        grid-area: flicker7;
+                    }
+                    .flicker-image8 {
+                        grid-area: flicker8;
+                    }
                 }
             }
         }

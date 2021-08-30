@@ -7,6 +7,7 @@ $colors: (
 );
 $fontFamily: 'Open Sans', Arial, sans-serif;
 $breakpoints: (
+    mobile: 650px,
     max-mobile: 799px,
     max-tablet: 1189px
 );
@@ -21,6 +22,12 @@ $breakpoints: (
     animation-timing-function: ease;
     animation-delay: $delay;
     animation-fill-mode: $fillMode;
+}
+
+@mixin mini {
+    @media (max-width: #{returnMap($breakpoints, mobile)}) {
+        @content;
+    }
 }
 
 @mixin mobile {
