@@ -1,0 +1,36 @@
+$colors: (
+    blue: #50c0e9,
+    black: #000,
+    white: #fff,
+    grey: #f9f9f9,
+    hrGrey: #eee
+);
+$fontFamily: 'Open Sans', Arial, sans-serif;
+$breakpoints: (
+    max-mobile: 799px,
+    max-tablet: 1189px
+);
+
+@function returnMap($object, $property) {
+    @return map-get($map: $object, $key: $property);
+}
+
+@mixin animate($animation, $time, $delay, $fillMode) {
+    animation-name: $animation;
+    animation-duration: $time;
+    animation-timing-function: ease;
+    animation-delay: $delay;
+    animation-fill-mode: $fillMode;
+}
+
+@mixin mobile {
+    @media (max-width: #{returnMap($breakpoints, max-mobile)}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{returnMap($breakpoints, max-tablet)}) {
+        @content;
+    }
+}

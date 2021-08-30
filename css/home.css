@@ -1,0 +1,1003 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+#arsha {
+  width: 1170px;
+  margin: 0 auto;
+  color: #000;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+@media (max-width: 1189px) {
+  #arsha {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+}
+
+#arsha #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  height: 63px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #header {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+#arsha #header #name {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 45px;
+}
+
+#arsha #header #name p {
+  display: inline-block;
+  font-size: 30px;
+  color: #50c0e9;
+}
+
+#arsha #header #name p:hover {
+  cursor: pointer;
+}
+
+#arsha #header #pages {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  margin-right: 30px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #header #pages {
+    margin-right: 0;
+  }
+}
+
+#arsha #header #pages div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #header #pages div {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+#arsha #header #pages div p {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#arsha #header #pages div:last-child {
+  margin-right: 0;
+}
+
+#arsha #header #pages div:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+#arsha #header #pages .selected {
+  background-color: #50c0e9;
+}
+
+#arsha #header #pages .selected p {
+  color: white;
+}
+
+#arsha #header #pages .selected:hover {
+  background-color: #50c0e9;
+}
+
+#arsha .blue-bar {
+  height: 30px;
+  background-color: #50c0e9;
+}
+
+#arsha #page-content #carousel {
+  position: relative;
+  height: 546px;
+  margin-bottom: 75px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #carousel {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #carousel .carousel-item {
+  display: none;
+}
+
+#arsha #page-content #carousel #carousel-item-1 {
+  background-image: url("../data/images/back-carousel-1.jpg");
+}
+
+#arsha #page-content #carousel #carousel-item-2 {
+  background-image: url("../data/images/back-carousel-2.jpg");
+}
+
+#arsha #page-content #carousel #carousel-item-3 {
+  background-image: url("../data/images/back-carousel-3.jpg");
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.33;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0%;
+  }
+  to {
+    left: 29.06%;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.33;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0%;
+  }
+  to {
+    left: 29.06%;
+  }
+}
+
+@-webkit-keyframes slideFromRight {
+  from {
+    right: 0%;
+  }
+  to {
+    left: 29.06%;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    right: 0%;
+  }
+  to {
+    left: 29.06%;
+  }
+}
+
+#arsha #page-content #carousel .selected {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1170px;
+  height: 546px;
+  background-size: cover;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #carousel .selected {
+    width: 100%;
+  }
+}
+
+#arsha #page-content #carousel .selected .carousel-text {
+  position: absolute;
+  top: 44.87%;
+  left: 0%;
+  -webkit-animation-name: slideFromLeft;
+          animation-name: slideFromLeft;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #carousel .selected .carousel-text {
+    left: 18%;
+    top: 40%;
+  }
+}
+
+#arsha #page-content #carousel .selected .carousel-text > div p {
+  background-color: #50c0e9;
+  color: #fff;
+  display: inline-block;
+}
+
+#arsha #page-content #carousel .selected .carousel-text .carousel-text-1 {
+  margin-bottom: 10px;
+}
+
+#arsha #page-content #carousel .selected .carousel-text .carousel-text-1 p {
+  font-size: 30px;
+  padding: 30px 15px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-1 p {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-1 p {
+    padding: 5px;
+    font-size: 24px;
+  }
+}
+
+#arsha #page-content #carousel .selected .carousel-text .carousel-text-2 {
+  margin-bottom: 10px;
+}
+
+#arsha #page-content #carousel .selected .carousel-text .carousel-text-2 p {
+  font-size: 14px;
+  padding: 15px 15px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-2 p {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-2 p {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+#arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
+  font-size: 18px;
+  padding: 30px 15px 20px 15px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
+    padding: 5px;
+    font-size: 16px;
+  }
+}
+
+#arsha #page-content #carousel .carousel-buttons {
+  position: absolute;
+  top: calc(50% - 17px);
+  color: #50c0e9;
+}
+
+#arsha #page-content #carousel .carousel-buttons i {
+  font-size: 34px;
+}
+
+#arsha #page-content #carousel .carousel-buttons i:hover {
+  cursor: pointer;
+}
+
+#arsha #page-content #carousel #carousel-previous-button {
+  left: 15px;
+}
+
+#arsha #page-content #carousel #carousel-next-button {
+  right: 15px;
+}
+
+#arsha #page-content #message-section {
+  margin-bottom: 115px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #message-section {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #message-section .message-section-heading {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#arsha #page-content #message-section .message-section-heading p {
+  display: inline-block;
+  color: #50c0e9;
+  font-size: 30px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #message-section .message-section-heading p {
+    font-size: 25px;
+  }
+}
+
+#arsha #page-content #message-section .message-section-content {
+  text-align: center;
+}
+
+#arsha #page-content #message-section .message-section-content p {
+  display: inline-block;
+  color: #50c0e9;
+  font-size: 14px;
+}
+
+#arsha #page-content .content-learn-button p, #arsha #page-content .content-learn-button i {
+  display: inline-block;
+  color: #50c0e9;
+  cursor: pointer;
+}
+
+#arsha #page-content .page-content-headings p {
+  color: #50c0e9;
+  font-size: 30px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content .page-content-headings p {
+    text-align: center;
+  }
+}
+
+#arsha #page-content #recent-work-section hr {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #recent-work-section hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #recent-work-section #features {
+  margin: 0 10px;
+}
+
+#arsha #page-content #recent-work-section #features .feature {
+  text-align: center;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #recent-work-section #features .feature {
+    width: 100%;
+  }
+}
+
+#arsha #page-content #recent-work-section #features .feature .content {
+  background-color: #f9f9f9;
+  padding: 70px 0;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-heading {
+  margin-bottom: 25px;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-heading p {
+  color: #000;
+  font-size: 18px;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-icon {
+  margin-bottom: 55px;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-icon i {
+  font-size: 40px;
+  color: #50c0e9;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-info {
+  margin-bottom: 50px;
+}
+
+#arsha #page-content #recent-work-section #features .feature .content .content-info p {
+  font-size: 14px;
+  color: #000;
+}
+
+#arsha #page-content #recent-work-section #features .feature-3 {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  width: calc((100% - 40px)/3);
+}
+
+#arsha #page-content #recent-work-section #features .feature-3 .content {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#arsha #page-content #recent-work-section #features #feature-id-3 {
+  margin-right: 0;
+}
+
+#arsha #page-content #recent-work-section #features .feature-2 {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 65px;
+  width: calc((100% - 20px)/2);
+}
+
+#arsha #page-content #recent-work-section #features .feature-2 .content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#arsha #page-content #recent-work-section #features .feature-1 {
+  display: inline-block;
+  width: 100%;
+}
+
+#arsha #page-content #recent-work-section #features #feature-id-5 {
+  margin-right: 0;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #recent-work-section #features #feature-id-5 {
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #about-us-section {
+  margin-bottom: 65px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section {
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #about-us-section hr {
+  margin-top: 45px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content {
+  margin: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content {
+    display: block;
+    margin: 0 10px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content .about-us-content-sections {
+  display: inline-block;
+  width: calc(50% - 20px);
+  height: 280px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content .about-us-content-sections {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-1 {
+  margin-right: 35px;
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-1 {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-heading {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-heading {
+    margin-bottom: 25px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-heading p {
+  text-align: center;
+  font-size: 18px;
+  color: #50c0e9;
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content {
+    padding: 0 150px;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content div {
+  margin-bottom: 45px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content div {
+    margin-bottom: 20px;
+  }
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content div:last-child {
+  margin-bottom: 0;
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content div p {
+  font-size: 14px;
+  color: #000;
+}
+
+#arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .content-learn-button {
+  text-align: center;
+}
+
+#arsha #page-content #our-team-section {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #our-team-section {
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #our-team-section hr {
+  margin-top: 45px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #our-team-section hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #our-team-section #team-members {
+  margin-bottom: 50px;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 {
+  display: inline-block;
+  width: calc(33% - 18px);
+  margin-right: 30px;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #our-team-section #team-members .team-members-class-3 {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content {
+  padding: 70px 60px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content {
+    padding: 30px 60px;
+  }
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-name {
+  margin-bottom: 35px;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-name p {
+  font-size: 18px;
+  color: #000;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-icon {
+  margin-bottom: 30px;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-icon i {
+  font-size: 40px;
+  color: #50c0e9;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-pic {
+  margin-bottom: 30px;
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-info {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-info {
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #our-team-section #team-members .team-members-class-3 .team-member-content .team-member-info p {
+  font-size: 14px;
+  color: #000;
+}
+
+#arsha #page-content #other-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 55px;
+  margin-bottom: 75px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section {
+    display: block;
+    margin: 0 10px;
+    margin-bottom: 50px;
+  }
+}
+
+#arsha #page-content #other-section .other-section-common-class {
+  display: inline-block;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section .other-section-common-class {
+    width: calc(50% - 10px);
+  }
+}
+
+#arsha #page-content #other-section .other-section-common-class .other-section-heading {
+  margin-bottom: 35px;
+}
+
+#arsha #page-content #other-section .other-section-common-class .other-section-heading p {
+  font-size: 14px;
+  color: #50c0e9;
+}
+
+#arsha #page-content #other-section .other-section-common-class .other-section-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+#arsha #page-content #other-section .other-section-common-class .other-section-content img {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+#arsha #page-content #other-section .other-section-common-class .other-section-content img:nth-child(3n) {
+  margin-right: 0;
+}
+
+#arsha #page-content #other-section .other-section-1 {
+  width: 200px;
+  margin-right: 115px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section .other-section-1 {
+    width: calc(50% - 10px);
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+#arsha #page-content #other-section .other-section-1 .other-section-content div {
+  margin-left: 15px;
+}
+
+#arsha #page-content #other-section .other-section-2 {
+  width: 350px;
+  margin-right: 120px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section .other-section-2 {
+    width: calc(50% - 10px);
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+#arsha #page-content #other-section .other-section-2 .other-section-content p:hover {
+  cursor: pointer;
+  color: #50c0e9;
+}
+
+#arsha #page-content #other-section .other-section-3 {
+  width: 500px;
+  margin-right: 75px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section .other-section-3 {
+    width: calc(50% - 10px);
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+#arsha #page-content #other-section .other-section-3 .other-section-content p:hover {
+  cursor: pointer;
+  color: #50c0e9;
+}
+
+@media (max-width: 1189px) {
+  #arsha #page-content #other-section .other-section-4 {
+    width: calc(50% - 10px);
+    text-align: center;
+  }
+}
+
+#arsha #page-content hr {
+  margin-bottom: 55px;
+}
+
+#arsha #footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 15px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1189px) {
+  #arsha #footer {
+    margin-bottom: 20px;
+  }
+}
+
+#arsha #footer #footer-copyright {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+}
+
+#arsha #footer #footer-copyright p, #arsha #footer #footer-copyright span {
+  display: inline-block;
+  font-size: 14px;
+  color: #000;
+}
+
+#arsha #footer #footer-copyright span {
+  white-space: pre;
+  color: #50c0e9;
+}
+
+#arsha #footer #footer-copyright span:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+#arsha #footer #footer-links {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+
+#arsha #footer #footer-links i {
+  font-size: 14px;
+  color: #50c0e9;
+  margin-right: 10px;
+}
+
+#arsha #footer #footer-links i:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+#arsha #footer #footer-links i:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=home.css.map */

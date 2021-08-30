@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link href="css/home.css" rel="stylesheet">
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/handlebars-v4.0.11.js"></script>
+    <script src="templates/feature.js"></script>
+    <script src="templates/team-member.js"></script>
+    <script src="js/home.js"></script>
+    <script defer>
+        var timeout = setTimeout(function() {
+            const feature1 = document.getElementById("feature-id-1"),
+                feature2 = document.getElementById("feature-id-2"),
+                feature3 = document.getElementById("feature-id-3"),
+                feature4 = document.getElementById("feature-id-4"),
+                feature5 = document.getElementById("feature-id-5");
+
+            feature1observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            feature2observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 4s`);
+            });
+            feature3observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            feature4observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            feature5observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            feature1observer.observe(feature1);
+            feature2observer.observe(feature2);
+            feature3observer.observe(feature3);
+            feature4observer.observe(feature4);
+            feature5observer.observe(feature5);
+
+            const teamMember1 = document.getElementById("team-member-1"),
+                teamMember2 = document.getElementById("team-member-2"),
+                teamMember3 = document.getElementById("team-member-3");
+
+            teamMember1observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            teamMember2observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 4s`);
+            });
+            teamMember3observer = new IntersectionObserver((entries) => {
+                callback(entries, `fadeIn 3s`);
+            });
+            teamMember1observer.observe(teamMember1);
+            teamMember2observer.observe(teamMember2);
+            teamMember3observer.observe(teamMember3);
+
+            const aboutUsSec1 = document.getElementById("about-us-content-section-1"),
+                aboutUsSec2  = document.getElementById("about-us-content-section-2");
+            aboutUsSec1Observer = new IntersectionObserver((entries) => {
+                callback(entries, `slideRight 4s`);
+            });
+            aboutUsSec2Observer = new IntersectionObserver((entries) => {
+                callback(entries, `slideRight 4s`);
+            });
+            aboutUsSec1Observer.observe(aboutUsSec1);
+            aboutUsSec2Observer.observe(aboutUsSec2);
+
+            clearTimeout(timeout);
+        }, 1500);
+
+        function callback(entries, animation) {
+            console.log(entries);
+            if(entries[0].intersectionRatio > 0) {
+                entries[0].target.style.animation = animation;
+            }
+            else {
+                entries[0].target.style.animation = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="arsha">
+        <div id="header">
+            <div id="name">
+                <p>Arsha</p>
+            </div>
+            <div id="pages">
+                <div id="home-page" class="selected">
+                    <p>Home</p>
+                </div>
+                <div id="blog-page">
+                    <p>Blog</p>
+                </div>
+                <div id="portfolio-page">
+                    <p>Portfolio</p>
+                </div>
+                <div id="contact-page">
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+        <div id="page-content">
+            <div id="carousel">
+                <div id="carousel-item-1" class="carousel-item selected">
+                    <div class="carousel-text">
+                        <div class="carousel-text-1">
+                            <p>creative design Responsive slider</p>
+                        </div>
+                        <div class="carousel-text-2">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet. </p>
+                        </div>
+                        <div class="carousel-text-3">
+                            <p>Clean and Flat</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel-item-2" class="carousel-item">
+                    <div class="carousel-text">
+                        <div class="carousel-text-1">
+                            <p>creative design Responsive slider</p>
+                        </div>
+                        <div class="carousel-text-2">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet. </p>
+                        </div>
+                        <div class="carousel-text-3">
+                            <p>Clean and Flat</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel-item-3" class="carousel-item">
+                    <div class="carousel-text">
+                        <div class="carousel-text-1">
+                            <p>creative design Responsive slider</p>
+                        </div>
+                        <div class="carousel-text-2">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sit amet. </p>
+                        </div>
+                        <div class="carousel-text-3">
+                            <p>Clean and Flat</p>
+                        </div>
+                    </div>
+                </div>
+                <a id="carousel-previous-button" class="carousel-buttons">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a id="carousel-next-button" class="carousel-buttons">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            <div id="message-section">
+                <div class="message-section-heading"><p>Create your outstanding clean and hight quality website</p></div>
+                <div class="message-section-content"><p>VOLUPTATEM ACCUSANTIUM DOLOREMQUE LAUDANTIUM SPREA TOTAM REM APERIAM.</p></div>
+            </div>
+            <div id="recent-work-section">
+                <div id="recent-work-section-heading" class="page-content-headings">
+                    <p>My Recent Works</p>
+                </div>
+                <hr>
+                <div id="features">
+                </div>
+            </div>
+            <div id="about-us-section">
+                <div id="about-us-heading" class="page-content-headings">
+                    <p>About us</p>
+                </div>
+                <hr>
+                <div id="about-us-content">
+                    <div id="about-us-content-section-1" class="about-us-content-sections">
+                        <img src="/data/images/image.jpg">
+                    </div>
+                    <div id="about-us-content-section-2" class="about-us-content-sections">
+                        <div class="about-us-content-section-2-heading">
+                            <p>Voluptatem accusantium doloremque</p>
+                        </div>
+                        <div class="about-us-content-section-2-content">
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                        <div class="content-learn-button">
+                            <p>Learn more</p>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="our-team-section">
+                <div id="our-team-section-heading" class="page-content-headings">
+                    <p>Our Team</p>
+                </div>
+                <hr>
+                <div id="team-members">
+                </div>
+                <hr>
+            </div>
+            <div id="other-section">
+                <div class="other-section-1 other-section-common-class">
+                    <div class="other-section-heading">
+                        <p>Get in touch with us</p>
+                    </div>
+                    <div class="other-section-content">
+                        <p class="bold">Arsha company Inc</p>
+                        <p>Modernbuilding suite V124, AB 01</p>
+                        <p>Someplace 16425 Earth</p>
+                        <br>
+                        <br>
+                        <div>
+                            <p>(123) 456-7890 - (123)</p>
+                            <p>555-7891</p>
+                            <p>email@domainname.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-section-2 other-section-common-class">
+                    <div class="other-section-heading">
+                        <p>Pages</p>
+                    </div>
+                    <div class="other-section-content">
+                        <p>Press release</p>
+                        <p>Terms and conditions</p>
+                        <p>Privacy policy</p>
+                        <p>Career center</p>
+                        <p>Contact us</p>
+                    </div>
+                </div>
+                <div class="other-section-3 other-section-common-class">
+                    <div class="other-section-heading">
+                        <p>Latest posts</p>
+                    </div>
+                    <div class="other-section-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Pellentesque et pulvinar enim. Quisque at tempor ligula</p>
+                        <p>Natus error sit voluptatem accusantium doloremque</p>
+                    </div>
+                </div>
+                <div class="other-section-4 other-section-common-class">
+                    <div class="other-section-heading">
+                        <p>Flickr photostream</p>
+                    </div>
+                    <div class="other-section-content">
+                        <img src="/data/images/flicker1.png">
+                        <img src="/data/images/flicker2.png">
+                        <img src="/data/images/flicker3.png">
+                        <img src="/data/images/flicker4.png">
+                        <img src="/data/images/flicker5.png">
+                        <img src="/data/images/flicker6.png">
+                        <img src="/data/images/flicker7.png">
+                        <img src="/data/images/flicker8.png">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="footer">
+            <div id="footer-copyright">
+                <p>&copy; Arsha, All right reserved.</p><br>
+                <p>Designed by</p><span> BootstrapTaste</span>
+            </div>
+            <div id="footer-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
