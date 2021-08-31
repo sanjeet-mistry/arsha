@@ -263,10 +263,10 @@ hr {
     opacity: 0;
   }
   40% {
-    opacity: 0;
+    opacity: 0.33;
   }
   60% {
-    opacity: 0.33;
+    opacity: 0.5;
   }
   80% {
     opacity: 0.67;
@@ -275,7 +275,7 @@ hr {
     opacity: 1;
   }
   from {
-    left: 0%;
+    left: 0;
   }
   to {
     left: 29.06%;
@@ -287,10 +287,10 @@ hr {
     opacity: 0;
   }
   40% {
-    opacity: 0;
+    opacity: 0.33;
   }
   60% {
-    opacity: 0.33;
+    opacity: 0.5;
   }
   80% {
     opacity: 0.67;
@@ -299,10 +299,106 @@ hr {
     opacity: 1;
   }
   from {
-    left: 0%;
+    left: 0;
   }
   to {
     left: 29.06%;
+  }
+}
+
+@-webkit-keyframes slideFromLeftMobile {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.33;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@keyframes slideFromLeftMobile {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.33;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-webkit-keyframes slideFromLeftMini {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.33;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0;
+  }
+  to {
+    left: 14%;
+  }
+}
+
+@keyframes slideFromLeftMini {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.33;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.67;
+  }
+  100% {
+    opacity: 1;
+  }
+  from {
+    left: 0;
+  }
+  to {
+    left: 14%;
   }
 }
 
@@ -368,8 +464,38 @@ hr {
 
 @media (max-width: 799px) {
   #arsha #page-content #carousel .selected .carousel-text {
-    left: 18%;
+    -webkit-animation-name: slideFromLeftMobile;
+            animation-name: slideFromLeftMobile;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     top: 40%;
+  }
+}
+
+@media (max-width: 650px) {
+  #arsha #page-content #carousel .selected .carousel-text {
+    -webkit-animation-name: slideFromLeftMini;
+            animation-name: slideFromLeftMini;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@media (max-width: 550px) {
+  #arsha #page-content #carousel .selected .carousel-text {
+    top: 30%;
   }
 }
 
@@ -401,6 +527,12 @@ hr {
   }
 }
 
+@media (max-width: 550px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-1 p {
+    font-size: 12px;
+  }
+}
+
 #arsha #page-content #carousel .selected .carousel-text .carousel-text-2 {
   margin-bottom: 10px;
 }
@@ -423,6 +555,12 @@ hr {
   }
 }
 
+@media (max-width: 550px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-2 p {
+    font-size: 8px;
+  }
+}
+
 #arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
   font-size: 18px;
   padding: 30px 15px 20px 15px;
@@ -438,6 +576,12 @@ hr {
   #arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
     padding: 5px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  #arsha #page-content #carousel .selected .carousel-text .carousel-text-3 p {
+    font-size: 10px;
   }
 }
 
@@ -1074,10 +1218,23 @@ hr {
   }
 }
 
+@media (max-width: 799px) {
+  #arsha #footer {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
 #arsha #footer #footer-copyright {
   display: inline-block;
   text-align: left;
   width: 50%;
+}
+
+@media (max-width: 550px) {
+  #arsha #footer #footer-copyright {
+    width: 60%;
+  }
 }
 
 #arsha #footer #footer-copyright p, #arsha #footer #footer-copyright span {
@@ -1103,6 +1260,12 @@ hr {
   display: inline-block;
   text-align: right;
   width: 50%;
+}
+
+@media (max-width: 550px) {
+  #arsha #footer #footer-links {
+    width: 40%;
+  }
 }
 
 #arsha #footer #footer-links i {

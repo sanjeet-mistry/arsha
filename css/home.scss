@@ -151,10 +151,10 @@ hr {
                     opacity:0;
                   }
                 40% {
-                    opacity: 0;
+                    opacity: 0.33;
                 }
                 60% {
-                    opacity: 0.33;
+                    opacity: 0.5;
                 }
                 80% {
                     opacity: 0.67;
@@ -162,8 +162,54 @@ hr {
                 100% {
                     opacity:1;
                 }
-                from {left: 0%;}
-                to {left: 29.06%;}
+                from {left: 0;}
+                to {
+                    left: 29.06%;
+                }
+            }
+
+            @keyframes slideFromLeftMobile {
+                0% {
+                    opacity:0;
+                  }
+                40% {
+                    opacity: 0.33;
+                }
+                60% {
+                    opacity: 0.5;
+                }
+                80% {
+                    opacity: 0.67;
+                }
+                100% {
+                    opacity:1;
+                }
+                from {left: 0;}
+                to {
+                    left: 20%;
+                }
+            }
+
+            @keyframes slideFromLeftMini {
+                0% {
+                    opacity:0;
+                  }
+                40% {
+                    opacity: 0.33;
+                }
+                60% {
+                    opacity: 0.5;
+                }
+                80% {
+                    opacity: 0.67;
+                }
+                100% {
+                    opacity:1;
+                }
+                from {left: 0;}
+                to {
+                    left: 14%;
+                }
             }
 
             @keyframes slideFromRight {
@@ -192,8 +238,15 @@ hr {
                     @include animate($animation: slideFromLeft, $time: 5s, $delay: 0s, $fillMode: forwards);
 
                     @include mobile {
-                        left: 18%;
+                        @include animate($animation: slideFromLeftMobile, $time: 4s, $delay: 0s, $fillMode: forwards);
                         top: 40%;
+                    }
+
+                    @include mini {
+                        @include animate($animation: slideFromLeftMini, $time: 4s, $delay: 0s, $fillMode: forwards);
+                    }
+                    @include micro {
+                        top: 30%;
                     }
 
                     > div {
@@ -218,6 +271,10 @@ hr {
                                 padding: 5px;
                                 font-size: 24px;
                             }
+
+                            @include micro {
+                                font-size: 12px;
+                            }
                         }
                     }
 
@@ -235,6 +292,10 @@ hr {
                                 padding: 5px;
                                 font-size: 12px;
                             }
+
+                            @include micro {
+                                font-size: 8px;
+                            }
                         }
                     }
 
@@ -250,6 +311,10 @@ hr {
                             @include mobile {
                                 padding: 5px;
                                 font-size: 16px;
+                            }
+
+                            @include micro {
+                                font-size: 10px;
                             }
                         }
                     }
@@ -734,11 +799,18 @@ hr {
         @include tablet {
             margin-bottom: 20px;
         }
+        @include mobile {
+            margin: 0;
+            margin-bottom: 10px;
+        }
 
         #footer-copyright {
            display: inline-block;
            text-align: left;
            width: 50%;
+           @include micro {
+               width: 60%;
+           }
             p, span {
                 display: inline-block;
                 font-size: 14px;
@@ -760,6 +832,9 @@ hr {
             display: inline-block;
             text-align: right;
             width: 50%;
+            @include micro {
+                width: 40%;
+            }
             i {
                 font-size: 14px;
                 color: returnMap($colors, blue);
