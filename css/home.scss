@@ -341,6 +341,10 @@ hr {
             #features {
                 margin: 0 10px;
 
+                @include tablet {
+                    margin: 0;
+                }
+
                 .feature {
                     text-align: center;
 
@@ -437,6 +441,10 @@ hr {
                     display: block;
                     margin: 0 10px;
                 }
+                @include mobile {
+                    display: block;
+                    margin: 0;
+                }
                 .about-us-content-sections {
                     display: inline-block;
                     width: calc(50% - 20px);
@@ -475,6 +483,12 @@ hr {
                         @include tablet {
                             padding: 0 150px;
                             margin-bottom: 30px;
+                        }
+                        @include mobile {
+                            padding: 0 50px;
+                        }
+                        @include mini {
+                            padding: 0 50px;
                         }
                         div {
                             margin-bottom: 45px;
@@ -731,13 +745,15 @@ hr {
                 color: returnMap($colors, black);
             }
             span {
-                white-space: pre;
                 color: returnMap($colors, blue);
                 &:hover {
                     cursor: pointer;
                     color: returnMap($colors, black);
                 }
 
+            }
+            p {
+                white-space: pre;
             }
         }
         #footer-links {

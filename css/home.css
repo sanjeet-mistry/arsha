@@ -534,6 +534,12 @@ hr {
   margin: 0 10px;
 }
 
+@media (max-width: 1189px) {
+  #arsha #page-content #recent-work-section #features {
+    margin: 0;
+  }
+}
+
 #arsha #page-content #recent-work-section #features .feature {
   text-align: center;
 }
@@ -655,6 +661,13 @@ hr {
   }
 }
 
+@media (max-width: 799px) {
+  #arsha #page-content #about-us-section #about-us-content {
+    display: block;
+    margin: 0;
+  }
+}
+
 #arsha #page-content #about-us-section #about-us-content .about-us-content-sections {
   display: inline-block;
   width: calc(50% - 20px);
@@ -709,6 +722,18 @@ hr {
   #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content {
     padding: 0 150px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  #arsha #page-content #about-us-section #about-us-content #about-us-content-section-2 .about-us-content-section-2-content {
+    padding: 0 50px;
   }
 }
 
@@ -1062,13 +1087,16 @@ hr {
 }
 
 #arsha #footer #footer-copyright span {
-  white-space: pre;
   color: #50c0e9;
 }
 
 #arsha #footer #footer-copyright span:hover {
   cursor: pointer;
   color: #000;
+}
+
+#arsha #footer #footer-copyright p {
+  white-space: pre;
 }
 
 #arsha #footer #footer-links {
