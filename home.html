@@ -14,71 +14,70 @@
     <script src="js/home.js"></script>
     <script defer>
         var timeout = setTimeout(function() {
-            const feature1 = document.getElementById("feature-id-1"),
-                feature2 = document.getElementById("feature-id-2"),
-                feature3 = document.getElementById("feature-id-3"),
-                feature4 = document.getElementById("feature-id-4"),
-                feature5 = document.getElementById("feature-id-5");
+            var feature1 = {element: document.getElementById("feature-id-1"), animatedOnce: false},
+                feature2 = {element: document.getElementById("feature-id-2"), animatedOnce: false},
+                feature3 = {element: document.getElementById("feature-id-3"), animatedOnce: false},
+                feature4 = {element: document.getElementById("feature-id-4"), animatedOnce: false},
+                feature5 = {element: document.getElementById("feature-id-5"), animatedOnce: false};
 
             feature1observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, feature1);
             });
             feature2observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 4s`);
+                callback(entries, `fadeIn 4s`, feature2);
             });
             feature3observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, feature3);
             });
             feature4observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, feature4);
             });
             feature5observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, feature5);
             });
-            feature1observer.observe(feature1);
-            feature2observer.observe(feature2);
-            feature3observer.observe(feature3);
-            feature4observer.observe(feature4);
-            feature5observer.observe(feature5);
+            feature1observer.observe(feature1.element);
+            feature2observer.observe(feature2.element);
+            feature3observer.observe(feature3.element);
+            feature4observer.observe(feature4.element);
+            feature5observer.observe(feature5.element);
 
-            const teamMember1 = document.getElementById("team-member-1"),
-                teamMember2 = document.getElementById("team-member-2"),
-                teamMember3 = document.getElementById("team-member-3");
+            var teamMember1 = {element: document.getElementById("team-member-1"), animatedOnce: false},
+                teamMember2 = {element: document.getElementById("team-member-2"), animatedOnce: false},
+                teamMember3 = {element: document.getElementById("team-member-3"), animatedOnce: false};
 
             teamMember1observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, teamMember1);
             });
             teamMember2observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 4s`);
+                callback(entries, `fadeIn 4s`, teamMember2);
             });
             teamMember3observer = new IntersectionObserver((entries) => {
-                callback(entries, `fadeIn 3s`);
+                callback(entries, `fadeIn 3s`, teamMember3);
             });
-            teamMember1observer.observe(teamMember1);
-            teamMember2observer.observe(teamMember2);
-            teamMember3observer.observe(teamMember3);
+            teamMember1observer.observe(teamMember1.element);
+            teamMember2observer.observe(teamMember2.element);
+            teamMember3observer.observe(teamMember3.element);
 
-            const aboutUsSec1 = document.getElementById("about-us-content-section-1"),
-                aboutUsSec2  = document.getElementById("about-us-content-section-2");
+            var aboutUsSec1 = {element: document.getElementById("about-us-content-section-1"), animatedOnce: false},
+                aboutUsSec2  = {element: document.getElementById("about-us-content-section-2"), animatedOnce: false};
             aboutUsSec1Observer = new IntersectionObserver((entries) => {
-                callback(entries, `slideRight 4s`);
+                callback(entries, `slideRight 4s`, aboutUsSec1);
             });
             aboutUsSec2Observer = new IntersectionObserver((entries) => {
-                callback(entries, `slideRight 4s`);
+                callback(entries, `slideRight 4s`, aboutUsSec2);
             });
-            aboutUsSec1Observer.observe(aboutUsSec1);
-            aboutUsSec2Observer.observe(aboutUsSec2);
+            aboutUsSec1Observer.observe(aboutUsSec1.element);
+            aboutUsSec2Observer.observe(aboutUsSec2.element);
 
             clearTimeout(timeout);
         }, 1500);
 
-        function callback(entries, animation) {
-            console.log(entries);
-            if(entries[0].intersectionRatio > 0) {
-                entries[0].target.style.animation = animation;
-            }
-            else {
-                entries[0].target.style.animation = 'none';
+        function callback(entries, animation, object) {
+            if(!object.animatedOnce) {
+                if(entries[0].intersectionRatio > 0) {
+                    entries[0].target.style.animation = animation;
+                    object.animatedOnce = true;
+                }
             }
         }
     </script>

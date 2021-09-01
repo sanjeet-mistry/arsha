@@ -5,8 +5,14 @@ $(document).ready(function() {
     $teamMembers = $pageContent.find("#team-members"),
     $prevButton = $carousel.find("#carousel-previous-button"),
     $nextButton = $carousel.find("#carousel-next-button"),
-    currentSlide = 0,
+    currentSlide = 0, showConsoleLogs = false,
     arshaData = {}, features = [], team = [];
+
+    function showConsoleLogs(value) {
+        if(showConsoleLogs) {
+            console.log(value);
+        }
+    }
 
     getJSONData();
     function getJSONData() {
@@ -63,12 +69,12 @@ $(document).ready(function() {
 
     $prevButton.click(function() {
         changeSlide(-1);
-        console.log("Previous Clicked");
+        showConsoleLogs("Previous Clicked");
     });
 
     $nextButton.click(function() {
         changeSlide(1);
-        console.log("Next Clicked");
+        showConsoleLogs("Next Clicked");
     });
 
     function changeSlide(difference) {
