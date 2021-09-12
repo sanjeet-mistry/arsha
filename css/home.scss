@@ -393,6 +393,7 @@ hr {
         }
 
         #recent-work-section {
+            margin-bottom: 50px;
             hr {
                 margin-top: 40px;
                 margin-bottom: 50px;
@@ -404,21 +405,34 @@ hr {
             }
 
             #features {
-                margin: 0 10px;
-
-                @include tablet {
-                    margin: 0;
-                }
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
 
                 .feature {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+                    flex-basis: calc(33.33% - 20px);
+                    box-sizing: border-box;
                     text-align: center;
-
                     @include tablet {
+                        flex-basis: calc(50% - 20px);
+                    }
+                    @include mobile {
+                        flex-basis: unset;
+                        flex-direction: column;
                         width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
                     }
                     .content {
                         background-color: returnMap($colors, grey);
-                        padding: 70px 0;
+                        padding: 70px 50px;
+                        @include mobile {
+                            padding: 50px;
+                        }
                         .content-heading {
                             margin-bottom: 25px;
                             p {
@@ -428,6 +442,9 @@ hr {
                         }
                         .content-icon {
                             margin-bottom: 55px;
+                            @include mobile {
+                                margin-bottom: 25px;
+                            }
                             i {
                                 font-size: 40px;
                                 color: returnMap($colors, blue);
@@ -435,52 +452,14 @@ hr {
                         }
                         .content-info {
                             margin-bottom: 50px;
+                            @include mobile {
+                                margin-bottom: 25px;
+                            }
                             p {
                                 font-size: 14px;
                                 color: returnMap($colors, black);
                             }
                         }
-                    }
-                }
-
-                .feature-3 {
-                    display: inline-block;
-                    margin-right: 20px;
-                    margin-bottom: 30px;
-                    width: calc((100% - 40px)/3);
-
-                    .content {
-                        padding-left: 50px;
-                        padding-right: 50px;
-                    }
-                }
-
-                #feature-id-3 {
-                    margin-right: 0;
-                }
-
-                .feature-2 {
-                    display: inline-block;
-                    margin-right: 20px;
-                    margin-bottom: 65px;
-                    width: calc((100% - 20px)/2);
-
-                    .content {
-                        padding-left: 70px;
-                        padding-right: 70px;
-                    }
-                }
-
-                .feature-1 {
-                    display: inline-block;
-                    width: 100%;
-                }
-
-                #feature-id-5 {
-                    margin-right: 0;
-
-                    @include tablet {
-                        margin-bottom: 50px;
                     }
                 }
             }

@@ -662,6 +662,10 @@ hr {
   }
 }
 
+#arsha #page-content #recent-work-section {
+  margin-bottom: 50px;
+}
+
 #arsha #page-content #recent-work-section hr {
   margin-top: 40px;
   margin-bottom: 50px;
@@ -675,28 +679,58 @@ hr {
 }
 
 #arsha #page-content #recent-work-section #features {
-  margin: 0 10px;
-}
-
-@media (max-width: 1189px) {
-  #arsha #page-content #recent-work-section #features {
-    margin: 0;
-  }
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #arsha #page-content #recent-work-section #features .feature {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  -ms-flex-preferred-size: calc(33.33% - 20px);
+      flex-basis: calc(33.33% - 20px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
 }
 
 @media (max-width: 1189px) {
   #arsha #page-content #recent-work-section #features .feature {
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #recent-work-section #features .feature {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 #arsha #page-content #recent-work-section #features .feature .content {
   background-color: #f9f9f9;
-  padding: 70px 0;
+  padding: 70px 50px;
+}
+
+@media (max-width: 799px) {
+  #arsha #page-content #recent-work-section #features .feature .content {
+    padding: 50px;
+  }
 }
 
 #arsha #page-content #recent-work-section #features .feature .content .content-heading {
@@ -712,6 +746,12 @@ hr {
   margin-bottom: 55px;
 }
 
+@media (max-width: 799px) {
+  #arsha #page-content #recent-work-section #features .feature .content .content-icon {
+    margin-bottom: 25px;
+  }
+}
+
 #arsha #page-content #recent-work-section #features .feature .content .content-icon i {
   font-size: 40px;
   color: #50c0e9;
@@ -721,52 +761,15 @@ hr {
   margin-bottom: 50px;
 }
 
+@media (max-width: 799px) {
+  #arsha #page-content #recent-work-section #features .feature .content .content-info {
+    margin-bottom: 25px;
+  }
+}
+
 #arsha #page-content #recent-work-section #features .feature .content .content-info p {
   font-size: 14px;
   color: #000;
-}
-
-#arsha #page-content #recent-work-section #features .feature-3 {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 30px;
-  width: calc((100% - 40px)/3);
-}
-
-#arsha #page-content #recent-work-section #features .feature-3 .content {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-#arsha #page-content #recent-work-section #features #feature-id-3 {
-  margin-right: 0;
-}
-
-#arsha #page-content #recent-work-section #features .feature-2 {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 65px;
-  width: calc((100% - 20px)/2);
-}
-
-#arsha #page-content #recent-work-section #features .feature-2 .content {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-#arsha #page-content #recent-work-section #features .feature-1 {
-  display: inline-block;
-  width: 100%;
-}
-
-#arsha #page-content #recent-work-section #features #feature-id-5 {
-  margin-right: 0;
-}
-
-@media (max-width: 1189px) {
-  #arsha #page-content #recent-work-section #features #feature-id-5 {
-    margin-bottom: 50px;
-  }
 }
 
 #arsha #page-content #about-us-section {

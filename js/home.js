@@ -33,17 +33,11 @@ $(document).ready(function() {
             html, context;
 
         for(i = 0; i < n; i++) {
-            if(i < 3) {
-                featureClass = "feature-3";
-            }
-            else {
-                featureClass = "feature-2";
-            }
             id = "feature-id-" + (i + 1);
             heading = features[i].heading;
             icon = features[i].icon;
             info = features[i].info;
-            context = {id: id, featureStyle: featureClass, contentHeading: heading, contentIcon: icon, contentInfo: info};
+            context = {id: id, contentHeading: heading, contentIcon: icon, contentInfo: info};
             html = Handlebars.templates['feature.hbs'](context);
             $features.append(html);
         }
@@ -97,20 +91,10 @@ $(document).ready(function() {
         if(windowWidth >= 1190) {
             $carousel.height("");
             $currentSlide.height("");
-            $features.find("#feature-id-1").addClass("feature-3");
-            $features.find("#feature-id-2").addClass("feature-3");
-            $features.find("#feature-id-3").addClass("feature-3");
-            $features.find("#feature-id-4").addClass("feature-2");
-            $features.find("#feature-id-5").addClass("feature-2");
         }
         else {
             $carousel.height(width / (15/7));
             $currentSlide.height(width / (15/7));
-            $features.find("#feature-id-1").removeClass("feature-3");
-            $features.find("#feature-id-2").removeClass("feature-3");
-            $features.find("#feature-id-3").removeClass("feature-3");
-            $features.find("#feature-id-4").removeClass("feature-2");
-            $features.find("#feature-id-5").removeClass("feature-2");
         }
     });
 });
