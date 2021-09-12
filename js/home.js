@@ -5,11 +5,11 @@ $(document).ready(function() {
     $teamMembers = $pageContent.find("#team-members"),
     $prevButton = $carousel.find("#carousel-previous-button"),
     $nextButton = $carousel.find("#carousel-next-button"),
-    currentSlide = 0, showConsoleLogs = false,
+    currentSlide = 0, showConsoleLogsVar = false,
     arshaData = {}, features = [], team = [];
 
     function showConsoleLogs(value) {
-        if(showConsoleLogs) {
+        if(showConsoleLogsVar) {
             console.log(value);
         }
     }
