@@ -17,7 +17,7 @@ hr {
     color: returnMap($colors, black);
     font-family: $fontFamily;
 
-    @include tablet {
+    @include smallDesktop {
         width: calc(100% - 20px);
         margin: 0 10px;
     }
@@ -27,7 +27,7 @@ hr {
         margin-top: 20px;
         height: 63px;
 
-        @include tablet {
+        @include smallDesktop {
             height: auto;
             margin-bottom: 20px;
         }
@@ -55,7 +55,7 @@ hr {
             text-align: right;
             margin-right: 30px;
 
-            @include tablet {
+            @include smallDesktop {
                 margin-right: 0;
             }
 
@@ -63,7 +63,7 @@ hr {
                 display: inline-block;
                 margin-right: 20px;
 
-                @include tablet {
+                @include smallDesktop {
                     display: block;
                     margin-right: 0;
                 }
@@ -107,7 +107,7 @@ hr {
             height: 546px;
             margin-bottom: 75px;
 
-            @include tablet {
+            @include smallDesktop {
                 width: 100%;
                 margin-bottom: 50px;
             }
@@ -233,7 +233,7 @@ hr {
                 background-size: cover;
                 @include animate($animation: fadeIn, $time: 2s, $delay: 0s, $fillMode: none);
 
-                @include tablet {
+                @include smallDesktop {
                     width: 100%;
                 }
 
@@ -243,15 +243,15 @@ hr {
                     left: 0%;
                     @include animate($animation: slideFromLeft, $time: 5s, $delay: 0s, $fillMode: forwards);
 
-                    @include mobile {
+                    @include tablet {
                         @include animate($animation: slideFromLeftMobile, $time: 4s, $delay: 0s, $fillMode: forwards);
                         top: 40%;
                     }
 
-                    @include mini {
+                    @include mobile {
                         @include animate($animation: slideFromLeftMini, $time: 4s, $delay: 0s, $fillMode: forwards);
                     }
-                    @include micro {
+                    @include mini {
                         top: 30%;
                     }
 
@@ -269,16 +269,16 @@ hr {
                             font-size: 30px;
                             padding: 30px 15px;
 
-                            @include tablet {
+                            @include smallDesktop {
                                 padding: 10px;
                             }
 
-                            @include mobile {
+                            @include tablet {
                                 padding: 5px;
                                 font-size: 24px;
                             }
 
-                            @include micro {
+                            @include mini {
                                 font-size: 12px;
                             }
                         }
@@ -290,16 +290,16 @@ hr {
                             font-size: 14px;
                             padding: 15px 15px;
 
-                            @include tablet {
+                            @include smallDesktop {
                                 padding: 10px;
                             }
 
-                            @include mobile {
+                            @include tablet {
                                 padding: 5px;
                                 font-size: 12px;
                             }
 
-                            @include micro {
+                            @include mini {
                                 font-size: 8px;
                             }
                         }
@@ -310,16 +310,16 @@ hr {
                             font-size: 18px;
                             padding: 30px 15px 20px 15px;
 
-                            @include tablet {
+                            @include smallDesktop {
                                 padding: 10px;
                             }
 
-                            @include mobile {
+                            @include tablet {
                                 padding: 5px;
                                 font-size: 16px;
                             }
 
-                            @include micro {
+                            @include mini {
                                 font-size: 10px;
                             }
                         }
@@ -352,7 +352,7 @@ hr {
         #message-section {
             margin-bottom: 115px;
 
-            @include tablet {
+            @include smallDesktop {
                 width: 100%;
                 margin-bottom: 50px;
             }
@@ -363,7 +363,7 @@ hr {
                     display: inline-block;
                     color: returnMap($colors, blue);
                     font-size: 30px;
-                    @include tablet {
+                    @include smallDesktop {
                         font-size: 25px;
                     }
                 }
@@ -392,7 +392,7 @@ hr {
                 color: returnMap($colors, blue);
                 font-size: 30px;
 
-                @include tablet {
+                @include smallDesktop {
                     text-align: center;
                 }
             }
@@ -404,7 +404,7 @@ hr {
                 margin-top: 40px;
                 margin-bottom: 50px;
 
-                @include tablet {
+                @include smallDesktop {
                     margin-top: 30px;
                     margin-bottom: 30px;
                 }
@@ -423,10 +423,10 @@ hr {
                     flex-basis: calc(33.33% - 20px);
                     box-sizing: border-box;
                     text-align: center;
-                    @include tablet {
+                    @include smallDesktop {
                         flex-basis: calc(50% - 20px);
                     }
-                    @include mobile {
+                    @include tablet {
                         flex-basis: unset;
                         flex-direction: column;
                         width: 100%;
@@ -436,7 +436,7 @@ hr {
                     .content {
                         background-color: returnMap($colors, grey);
                         padding: 70px 50px;
-                        @include mobile {
+                        @include tablet {
                             padding: 50px;
                         }
                         .content-heading {
@@ -448,7 +448,7 @@ hr {
                         }
                         .content-icon {
                             margin-bottom: 55px;
-                            @include mobile {
+                            @include tablet {
                                 margin-bottom: 25px;
                             }
                             i {
@@ -458,7 +458,7 @@ hr {
                         }
                         .content-info {
                             margin-bottom: 50px;
-                            @include mobile {
+                            @include tablet {
                                 margin-bottom: 25px;
                             }
                             p {
@@ -473,13 +473,13 @@ hr {
 
         #about-us-section {
             margin-bottom: 65px;
-            @include tablet {
+            @include smallDesktop {
                 margin-bottom: 50px;
             }
             hr {
                 margin-top: 45px;
                 margin-bottom: 70px;
-                @include tablet {
+                @include smallDesktop {
                     margin-top: 30px;
                     margin-bottom: 30px;
                 }
@@ -487,11 +487,11 @@ hr {
             #about-us-content {
                 margin: 0 15px;
                 display: flex;
-                @include tablet {
+                @include smallDesktop {
                     display: block;
                     margin: 0 10px;
                 }
-                @include mobile {
+                @include tablet {
                     display: block;
                     margin: 0;
                 }
@@ -499,7 +499,7 @@ hr {
                     display: inline-block;
                     width: calc(50% - 20px);
                     height: 280px;
-                    @include tablet {
+                    @include smallDesktop {
                         display: block;
                         width: 100%;
                         height: auto;
@@ -511,7 +511,7 @@ hr {
                         height: 100%;
                     }
                     margin-right: 35px;
-                    @include tablet {
+                    @include smallDesktop {
                         margin-right: 0;
                         margin-bottom: 30px;
                     }
@@ -519,7 +519,7 @@ hr {
                 #about-us-content-section-2 {
                     .about-us-content-section-2-heading {
                         margin-bottom: 40px;
-                        @include tablet {
+                        @include smallDesktop {
                             margin-bottom: 25px;
                         }
                         p {
@@ -530,19 +530,19 @@ hr {
                     }
                     .about-us-content-section-2-content {
                         margin-bottom: 30px;
-                        @include tablet {
+                        @include smallDesktop {
                             padding: 0 150px;
                             margin-bottom: 30px;
+                        }
+                        @include tablet {
+                            padding: 0 50px;
                         }
                         @include mobile {
                             padding: 0 50px;
                         }
-                        @include mini {
-                            padding: 0 50px;
-                        }
                         div {
                             margin-bottom: 45px;
-                            @include tablet {
+                            @include smallDesktop {
                                 margin-bottom: 20px;
                             }
                             &:last-child {
@@ -563,14 +563,14 @@ hr {
 
         #our-team-section {
             margin-bottom: 70px;
-            @include tablet {
+            @include smallDesktop {
                 margin-bottom: 50px;
             }
 
             hr {
                 margin-top: 45px;
                 margin-bottom: 50px;
-                @include tablet {
+                @include smallDesktop {
                     margin-top: 30px;
                     margin-bottom: 30px;
                 }
@@ -584,14 +584,14 @@ hr {
                     &:last-child {
                         margin-right: 0;
                     }
-                    @include tablet {
+                    @include smallDesktop {
                         display: block;
                         width: 100%;
                         margin-right: 0;
                     }
                     .team-member-content {
                         padding: 70px 60px;
-                        @include tablet {
+                        @include smallDesktop {
                             padding: 30px 60px;
                         }
                         background-color: returnMap($colors, grey);
@@ -615,7 +615,7 @@ hr {
                         }
                         .team-member-info {
                             margin-bottom: 55px;
-                            @include tablet {
+                            @include smallDesktop {
                                 margin-bottom: 30px;
                             }
                             p {
@@ -635,7 +635,7 @@ hr {
             grid-gap: 90px;
             margin: 0 55px;
             margin-bottom: 75px;
-            @include tablet {
+            @include smallDesktop {
                 grid-template-areas: 'other-sec1 other-sec2'
                     'other-sec3 other-sec4';
                 grid-template-columns: 50% auto;
@@ -643,7 +643,7 @@ hr {
                 margin: 0;
                 margin-bottom: 50px;
             }
-            @include mini {
+            @include mobile {
                 grid-template-areas: 'other-sec1'
                     'other-sec2'
                     'other-sec3'
@@ -671,7 +671,7 @@ hr {
             }
             .other-section-1 {
                 grid-area: other-sec1;
-                @include tablet {
+                @include smallDesktop {
                     margin-right: 0;
                     text-align: center;
                 }
@@ -683,11 +683,11 @@ hr {
             }
             .other-section-2 {
                 grid-area: other-sec2;
-                @include tablet {
+                @include smallDesktop {
                     margin-right: 0;
                     text-align: center;
                 }
-                @include mini {
+                @include mobile {
                     margin-bottom: 0;
                 }
                 .other-section-content {
@@ -701,7 +701,7 @@ hr {
             }
             .other-section-3 {
                 grid-area: other-sec3;
-                @include tablet {
+                @include smallDesktop {
                     margin-right: 0;
                     text-align: center;
                 }
@@ -717,7 +717,7 @@ hr {
 
             .other-section-4 {
                 grid-area: other-sec4;
-                @include tablet {
+                @include smallDesktop {
                     text-align: center;
                 }
                 .other-section-content {
@@ -726,12 +726,12 @@ hr {
                         'flicker4 flicker5 flicker6'
                         'flicker7 flicker8 flicker8';
                     grid-gap: 20px 10px;
-                    @include tablet {
+                    @include smallDesktop {
                         grid-template-areas: 'flicker1 flicker2 flicker3 flicker4'
                             'flicker5 flicker6 flicker7 flicker8';
                         grid-gap: 10px 20px;
                     }
-                    @include mini {
+                    @include mobile {
                         margin: 0 auto;
                         width: 230px;
                         grid-gap: 10px;
@@ -781,10 +781,10 @@ hr {
         display: flex;
         margin: 0 15px;
         margin-bottom: 55px;
-        @include tablet {
+        @include smallDesktop {
             margin-bottom: 20px;
         }
-        @include mobile {
+        @include tablet {
             margin: 0;
             margin-bottom: 10px;
         }
@@ -793,7 +793,7 @@ hr {
            display: inline-block;
            text-align: left;
            width: 50%;
-           @include micro {
+           @include mini {
                width: 60%;
            }
             p, span {
@@ -817,7 +817,7 @@ hr {
             display: inline-block;
             text-align: right;
             width: 50%;
-            @include micro {
+            @include mini {
                 width: 40%;
             }
             i {
