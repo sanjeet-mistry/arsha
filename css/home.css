@@ -262,6 +262,9 @@ hr {
   0% {
     opacity: 0;
   }
+  20% {
+    opacity: 0.167;
+  }
   40% {
     opacity: 0.33;
   }
@@ -269,7 +272,10 @@ hr {
     opacity: 0.5;
   }
   80% {
-    opacity: 0.67;
+    opacity: 0.667;
+  }
+  90% {
+    opacity: 0.833;
   }
   100% {
     opacity: 1;
@@ -286,6 +292,9 @@ hr {
   0% {
     opacity: 0;
   }
+  20% {
+    opacity: 0.167;
+  }
   40% {
     opacity: 0.33;
   }
@@ -293,7 +302,10 @@ hr {
     opacity: 0.5;
   }
   80% {
-    opacity: 0.67;
+    opacity: 0.667;
+  }
+  90% {
+    opacity: 0.833;
   }
   100% {
     opacity: 1;
@@ -1014,10 +1026,10 @@ hr {
 @media (max-width: 1189px) {
   #arsha #page-content #other-section {
         grid-template-areas: 'other-sec1 other-sec2' 'other-sec3 other-sec4';
-    -ms-grid-columns: calc(50% - 10px) auto;
-        grid-template-columns: calc(50% - 10px) auto;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
     grid-gap: 50px;
-    margin: 0 10px;
+    margin: 0;
     margin-bottom: 50px;
   }
 }
